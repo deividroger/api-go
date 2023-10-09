@@ -1,0 +1,35 @@
+POST http://localhost:8000/products HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Notebook Dell",
+    "price": 200
+}
+
+###
+
+GET http://localhost:8000/products/225fbe31-cd3f-405b-ac0a-664b6d249e31 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTY2OTY1MzgsIm5hbWUiOiJhZG1pbiIsInN1YiI6ImFiOWJjNjZiLTkyM2EtNDgzMi04YzFhLTg1ZWYwM2U2NDU5MCJ9.sT13qu3NZK-5CzbC9IEcnWVy0XOnFwV3M5nuQYMBNTQ
+
+###
+
+PUT http://localhost:8000/products/225fbe31-cd3f-405b-ac0a-664b6d249e31 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Notebook Dell (updated) 2",
+    "price": 250
+}
+
+###
+DELETE http://localhost:8000/products/225fbe31-cd3f-405b-ac0a-664b6d249e31 HTTP/1.1
+
+###
+GET http://localhost:8000/products HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTY3ODYyODcsIm5hbWUiOiJhZG1pbiIsInN1YiI6ImFiOWJjNjZiLTkyM2EtNDgzMi04YzFhLTg1ZWYwM2U2NDU5MCJ9.Z_yQTE725PKhKQc_Kf-Kyo6o4upPForSDdGZsuDhE_A
+
+###
+
+GET http://localhost:8000/products?limit=1&page=1 HTTP/1.1
+
